@@ -80,7 +80,7 @@ Projekt jest udostępniony na licencji [MIT](LICENSE). Proszę zapoznać się z 
 
 ## Kontakt
 
-Jeśli masz pytania, skontaktuj się ze mną za pośrednictwem [GitHub Issues](https://github.com/yourusername/my-image-processing-app/issues) lub wyślij e-mail na adres: your.email@example.com.
+Jeśli masz pytania, skontaktuj się ze mną za pośrednictwem [GitHub Issues](https://github.com/yourusername/my-image-processing-app/issues)
 
 ---
 
