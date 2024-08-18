@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="636.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tescik.ButtonController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane fx:id="AnchorImg" prefHeight="61.0" prefWidth="614.0">
+      <children>
+         <ImageView fx:id="ImageInput" fitHeight="150.0" fitWidth="200.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="ImageOutput" fitHeight="150.0" fitWidth="200.0" layoutX="198.0" pickOnBounds="true" preserveRatio="true">
+     
+   </ImageView>
+         <ImageView fx:id="ImageInput2" fitHeight="150.0" fitWidth="200.0" layoutX="417.0" pickOnBounds="true" preserveRatio="true" />
+      </children>
+   </AnchorPane>
+   <AnchorPane fx:id="AnchorButtons" prefHeight="218.0" prefWidth="617.0">
+      <children>
+         <Button fx:id="YUVButton" layoutX="302.0" layoutY="14.0" mnemonicParsing="false" onAction="#onYUVButtonClick" text="Konwertuj Obraz YUV" />
+          <Button fx:id="HSVButton" layoutX="302.0" layoutY="40.0" onAction="#onHSVButtonClick" text="Konwertuj Obraz HSV" />
+         <Button fx:id="ImgInputButton" layoutX="149.0" layoutY="16.0" mnemonicParsing="false" onAction="#ImgInputButtonClick" text="Wczytaj Obraz" />
+         <Button fx:id="BinButton" layoutX="302.0" layoutY="66.0" mnemonicParsing="false" onAction="#OnBINButtonClick" prefHeight="26.0" prefWidth="98.0" text="Binaryzacja" />
+         <TextField fx:id="BinValue" layoutX="302.0" layoutY="134.0" />
+         <Button fx:id="TwoImgMinus" layoutX="302.0" layoutY="92.0" mnemonicParsing="false" onAction="#OnTwoImgButtonClick" text="Odejmij obrazy" />
+         <Button fx:id="ImgInputButton2" layoutX="149.0" layoutY="42.0" mnemonicParsing="false" onAction="#ImgInputButtonClick2" text="Wczytaj drugi obraz" />
+         <Button fx:id="MedFiltrButton" layoutY="118.0" mnemonicParsing="false" onAction="#OnMedFiltrButton" text="Filtracja medianowa" />
+         <Button fx:id="MinFiltrButton" layoutY="92.0" mnemonicParsing="false" onAction="#OnMinFiltrButton" text="Filtracja minimalna" />
+         <Button fx:id="MaxFiltrButton" layoutY="66.0" mnemonicParsing="false" onAction="#OnMaxFiltrButton" text="Filtracja maksymalna" />
+         <Button fx:id="HoriEdgeButton" layoutX="472.0" layoutY="66.0" mnemonicParsing="false" onAction="#OnHoriEdgeButton" text="Krawędź pozioma" />
+         <Button fx:id="VertEdgeButton" layoutX="472.0" layoutY="92.0" mnemonicParsing="false" onAction="#OnVertEdgeButton" text="Krawędź pionowa" />
+         <Button fx:id="DiagEdgeButton" layoutX="472.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnDiagEdgeButton" text="Krawędź ukośna" />
+         <Button fx:id="AllEdgeButton" layoutX="472.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnAllEdgeButton" text="Wszystkie krawędzie" />
+         <Button fx:id="GpFiltrButton" layoutY="14.0" mnemonicParsing="false" onAction="#OnGpFiltrButton" text="Filtracja GP" />
+         <Button fx:id="DpFiltrButton" layoutY="40.0" mnemonicParsing="false" onAction="#OnDpFiltrButton" text="Filtracja DP" />
+         <Text layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtracja" wrappingWidth="59.21630859375" />
+         <Text layoutX="149.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wczytywanie obrazów" />
+         <Text layoutX="301.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Działania" />
+         <Text layoutX="472.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Krawędzie" />
+         <Text layoutX="186.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wartość binaryzacji:" />
+      </children>
+   </AnchorPane>
+   <LineChart fx:id="Hist1" prefHeight="136.0" prefWidth="617.0">
+     <xAxis>
+       <NumberAxis side="BOTTOM" />
+     </xAxis>
+     <yAxis>
+       <NumberAxis side="LEFT" />
+     </yAxis>
+   </LineChart>
+</VBox>
